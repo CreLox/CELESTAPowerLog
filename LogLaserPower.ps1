@@ -8,9 +8,10 @@ while (0 -eq 0) {
 	$HTML = Invoke-WebRequest $URL
 	$TimeStamp = Get-Date -Format "HH:mm:ss.fff"
 	
-	$HTML.Content -match '{?<Status>.*CHPWR ?<mWPower>}'
+	$HTML.Content -match '"message": "(?<Status>.+) CHPWR (?<mWPower>.+)"' >$null
 	if (($Matches.Status -eq "A") -and ($Matches.mWPower -ne "0")) {
-		Add-Content $File $TimeStamp+","+$Matches.mWPower
+        $NewLine = $TimeStamp+","+$Matches.mWPower
+		Add-Content $File $NewLine
 	}
 
 	Start-Sleep -Milliseconds $Interval
