@@ -10,7 +10,7 @@ while (0 -eq 0) {
 	
 	$HTML.Content -match '"message": "(?<Status>.+) CHPWR (?<mWPower>.+)"' >$null
 	if (($Matches.Status -eq "A") -and ($Matches.mWPower -ne "0")) {
-        $NewLine = $TimeStamp+","+$Matches.mWPower
+        	$NewLine = $TimeStamp+","+$Matches.mWPower
 		Add-Content $File $NewLine
 	}
 
