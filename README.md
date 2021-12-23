@@ -1,6 +1,6 @@
 # CelestaPowerLog
 1. Follow the [CELESTA and CELESTA quattro Light Engine® Instruction Manual](https://cms.lumencor.com/system/uploads/fae/file/asset/48/57-10015-F_Celesta_09092021.pdf) (3.3.3 Ethernet Connection and Control GUI) to set up LAN communication with the onboard computer of the Light Engine.
-2. Run ``LogLaserPower.ps1`` on PowerShell (you might need to [change execution policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies) to run a script). It requires one parameter input to specify the laser line to be logged. For example, to log the fourth laser line (corresponding to the 546-nm line; note that the numbering starts from 0):
+2. Run ``LogLaserPower.ps1`` on PowerShell (you might need to [change execution policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies) to run a script). It requires one parameter input to specify the laser line to be logged. For example, to log the fourth laser line (corresponding to the 546-nm line on a CELESTA Light Engine®; note that the numbering starts from 0):
 ```
 LogLaserPower.ps1 4
 ```
