@@ -6,7 +6,7 @@ function FigHandle = reconstitutePulse(CelestaLogPath, ExistingFigHandle)
     BoxOnOrOff = 'off';
     
     % Read the log file (comma-separated)
-    LogTable = readtable(CelestaLogPath);
+    LogTable = readtable(CelestaLogPath, 'FileType', 'text');
     InstantaneousPowers = LogTable.Var2;
     
     % Calculate the empirical cumulative distribution (plotting inhibited)
