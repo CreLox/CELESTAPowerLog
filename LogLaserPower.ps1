@@ -12,7 +12,7 @@ while (0 -eq 0) {
 	$HTML.Content -match '"message": "(?<Status>.+) CHPWRWATTS (?<mWPower>.+)"' >$null
 	if (($Matches.Status -eq "A") -and ($Matches.mWPower -ge $Threshold)) {
         $NewLine = $TimeStamp+","+$Matches.mWPower
-		Add-Content $File $NewLine
+        Add-Content $File $NewLine
 	}
 
 	Start-Sleep -Milliseconds $Interval
