@@ -1,4 +1,4 @@
-$Interval = 25
+$Interval = 12
 
 $URL = "http://192.168.201.200/service/?command=GET%20CHPWR%20"+$args[0]
 $Date = Get-Date -Format "yyyyMMdd"
