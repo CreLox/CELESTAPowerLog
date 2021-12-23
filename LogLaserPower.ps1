@@ -6,14 +6,14 @@ $Date = Get-Date -Format "yyyyMMdd"
 $File = "C:\Users\"+$env:UserName+"\Desktop\"+$Date+"_LaserLine"+$args[0]+"Power.log"
 
 while (0 -eq 0) {
-	$HTML = Invoke-WebRequest $URL
-	$TimeStamp = Get-Date -Format "HH:mm:ss.fff"
-	
-	$HTML.Content -match '"message": "(?<Status>.+) CHPWRWATTS (?<mWPower>.+)"' >$null
-	if (($Matches.Status -eq "A") -and ($Matches.mWPower -ge $Threshold)) {
+    $HTML = Invoke-WebRequest $URL
+    $TimeStamp = Get-Date -Format "HH:mm:ss.fff"
+    
+    $HTML.Content -match '"message": "(?<Status>.+) CHPWRWATTS (?<mWPower>.+)"' >$null
+    if (($Matches.Status -eq "A") -and ($Matches.mWPower -ge $Threshold)) {
         $NewLine = $TimeStamp+","+$Matches.mWPower
         Add-Content $File $NewLine
-	}
-
-	Start-Sleep -Milliseconds $Interval
+    }
+    
+    Start-Sleep -Milliseconds $Interval
 }
