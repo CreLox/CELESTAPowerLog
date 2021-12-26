@@ -23,7 +23,7 @@ function [PulseProperty, FigHandle] = reconstitutePulse(CelestaLogPath, ...
     
     % New figure: plot instantaneous power readout-t
     figure;
-    scatter(LogTable.Var1, LogTable.Var2, 'k.');
+    scatter(LogTable.Var1, InstantaneousPowers, 'k.');
     xlabel('Time');
     ylabel('Instantaneous power (mW)');
     set(gca, 'FontSize', FontSize, 'LineWidth', LineWidth, ...
