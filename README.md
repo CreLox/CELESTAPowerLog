@@ -12,8 +12,8 @@
 4. Each line in the log contains the following formatted information: **hour**(24-h clock)**:min:second**(1-ms accuracy)**,power**(in milliwatts). During most of the time, the laser is off and the instantaneous power readout is simply 0.0 mW. All measurements below ``$Threshold`` mW are ignored and not logged. The idle interval between consecutive queries is ``$Interval`` ms (which does not include the latency due to communication and internal processing). **I am currently working on improving the robustness of queries if no answer string is received within 50 ms.**
 
 5. Run the MATLAB function ``reconstitutePulse`` using the log file to visually examine
- - the inverse empirical cumulative distribution of instantaneous powers (assuming that all pulses from the session are equivalent);
- - a scatter plot of instantaneous power readout vs time (note that the shape of the pulse is inevitably smoothed because the power readout can never actually be instantaneous).
+   - the inverse empirical cumulative distribution of instantaneous powers (assuming that all pulses from the session are equivalent);
+   - a scatter plot of instantaneous power readout vs time (note that the shape of the pulse is inevitably smoothed because the power readout can never actually be instantaneous).
 
 6. Parameters in ``LogLaserPower.ps1`` and ``reconstitutePulse.m`` are closely related. If you change a parameter in a script, you may need to consider changing the related parameter in the other script.
 # Acknowledgement
