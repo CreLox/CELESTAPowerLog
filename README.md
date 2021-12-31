@@ -5,6 +5,8 @@
 ```
 LogLaserPower.ps1 4
 ```
+The channel mapping for the Light Engine in Joglekar Lab is 0-Violet (405 nm), 1-Blue (446 nm), 2-Cyan (477 nm), 3-Teal (520 nm), 4-Green (546 nm), 5-Red (638 nm), and 6-NIR (749 nm).
+
 3. Keep the PowerShell session on for the entire logged session. The log will be on the current user's desktop. It is suggested to add **the exposure time** and **the percentage intensity** information (of the channel that used this laser line) manually to the filename of the log.
 
 4. Each line in the log contains the following formatted information: **hour**(24-h clock)**:min:second**(1-ms accuracy)**,power**(in milliwatts). During most of the time, the laser is off and the instantaneous power readout is simply 0.0 mW. All measurements below ``$Threshold`` mW are ignored and not logged. The idle interval between consecutive queries is ``$Interval`` ms (which does not include the latency due to communication and internal processing). **I am currently working on improving the robustness of queries if no answer string is received within 50 ms.**
