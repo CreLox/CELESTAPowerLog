@@ -5,7 +5,7 @@
 ```
 LogLaserPower.ps1 4
 ```
-The channel mapping for the Light Engine in Joglekar Lab is 0-Violet (405 nm), 1-Blue (446 nm), 2-Cyan (477 nm), 3-Teal (520 nm), 4-Green (546 nm), 5-Red (638 nm), and 6-NIR (749 nm).
+The channel mapping for the Light Engine in the Joglekar Lab is 0-Violet (405 nm), 1-Blue (446 nm), 2-Cyan (477 nm), 3-Teal (520 nm), 4-Green (546 nm), 5-Red (638 nm), and 6-NIR (749 nm).
 
 3. Keep the PowerShell session on for the entire logged session. The log will be on the current user's desktop. It is suggested to add **the exposure time** and **the percentage intensity** information (of the channel that used this laser line) manually to the filename of the log.
 
