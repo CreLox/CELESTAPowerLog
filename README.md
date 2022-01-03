@@ -5,7 +5,7 @@
    ```PowerShell
    LogLaserPower.ps1 4
    ```
-   Channel mapping for the Light Engine in the Joglekar Lab: 0-Violet (405 nm), 1-Blue (446 nm), 2-Cyan (477 nm), 3-Teal (520 nm), 4-Green (546 nm), 5-Red (638 nm), and 6-NIR (749 nm).
+   CHPWR returns the raw sensor output (used in manufacturing) whereas CHPWRWATTS (here in ``LogLaserPower.ps1``) gives the measured output after applying calibrations. Channel mapping for the Light Engine in the Joglekar Lab: 0-Violet (405 nm), 1-Blue (446 nm), 2-Cyan (477 nm), 3-Teal (520 nm), 4-Green (546 nm), 5-Red (638 nm), and 6-NIR (749 nm).
 
 3. Keep the PowerShell session on for the entire logged session. The log will be on the current user's desktop. It is suggested to add **the exposure time** and **the percentage intensity** information (of the channel that used this laser line) manually to the filename of the log.
 
@@ -21,4 +21,4 @@
 
 6. Parameters in ``LogLaserPower.ps1`` and ``reconstitutePulse.m`` are closely related. If you change a parameter in a script, you may need to consider changing the related parameter in the other script.
 # Acknowledgement
-I would like to give my special thanks to Dr. Iain Johnson from Lumencor, Inc. for detailed explanations of terminology involved.
+I would like to give my special thanks to the technical support team (especially Iain Johnson and Glennon Fagan) from Lumencor, Inc. for their explanations of terminology.
